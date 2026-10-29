@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="APIN ANONYMUS-X premium dashboard template">
+<title>APIN ANONYMUS-X — Green Panel</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#">
+      <span class="brand-icon">A</span>
+      <span>APIN <span class="green">ANONYMUS-X</span>
+        <small>ANONYMOUS SYSTEM</small>
+      </span>
+    </a>
+
+    <p class="section-label">WORKSPACE</p>
+    <nav>
+      <button class="nav-item active" data-page="overview">▦ <span>Overview</span></button>
+      <button class="nav-item" data-page="analytics">▥ <span>Analytics</span></button>
+      <button class="nav-item" data-page="projects">◈ <span>Projects</span></button>
+      <button class="nav-item" data-page="customers">♙ <span>Customers</span></button>
+    </nav>
+
+    <p class="section-label">PREFERENCES</p>
+    <nav>
+      <button class="nav-item" data-page="settings">⚙ <span>Settings</span></button>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <span class="online-dot"></span> SYSTEM ONLINE
+      <small>APIN UI KIT · V1.0.0</small>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+      <div>
+        <p class="eyebrow">WORKSPACE / <span id="breadcrumb">OVERVIEW</span></p>
+        <h1 id="pageTitle">Dashboard Overview</h1>
+      </div>
+      <button class="avatar" id="profileButton" title="Profile">A</button>
+    </header>
+
+    <section class="welcome">
+      <div>
+        <p class="eyebrow">TUESDAY · YOUR WORKSPACE</p>
+        <h2>Welcome back, <span class="green">Admin.</span></h2>
+        <p>Your workspace at a glance.</p>
+      </div>
+      <button class="primary-button" id="exportButton">↓ Export data</button>
+    </section>
+
+    <div id="notice" class="notice" role="status" aria-live="polite"></div>
+
+    <section class="stats" id="stats">
+      <article class="stat-card">
+        <div class="stat-top"><span>Total Revenue</span><span class="stat-icon">$</span></div>
+        <strong id="revenue">Rp 12.500.000</strong>
+        <small class="positive">DEMO DATA · SAMPLE</small>
+      </article>
+      <article class="stat-card">
+        <div class="stat-top"><span>Active Projects</span><span class="stat-icon">◈</span></div>
+        <strong id="projectCount">08</strong>
+        <small>Across your workspace</small>
+      </article>
+      <article class="stat-card">
+        <div class="stat-top"><span>Customers</span><span class="stat-icon">♙</span></div>
+        <strong id="customerCount">124</strong>
+        <small>Sample customer records</small>
+      </article>
+      <article class="stat-card">
+        <div class="stat-top"><span>System Status</span><span class="stat-icon">⌁</span></div>
+        <strong class="green">ONLINE</strong>
+        <small>Dashboard interface loaded</small>
+      </article>
+    </section>
+
+    <section class="content-grid" id="overviewContent">
+      <article class="panel chart-panel">
+        <div class="panel-heading">
+          <div><h3>Revenue Overview</h3><p>Illustrative monthly data</p></div>
+          <span class="tag">DEMO</span>
+        </div>
+        <div class="chart" aria-label="Sample revenue chart">
+          <div class="chart-y"><span>10M</span><span>7.5M</span><span>5M</span><span>2.5M</span><span>0</span></div>
+          <div class="bars">
+            <div class="bar-column"><i style="height:38%"></i><span>Jan</span></div>
+            <div class="bar-column"><i style="height:58%"></i><span>Feb</span></div>
+            <div class="bar-column"><i style="height:44%"></i><span>Mar</span></div>
+            <div class="bar-column"><i style="height:72%"></i><span>Apr</span></div>
+            <div class="bar-column"><i style="height:55%"></i><span>May</span></div>
+            <div class="bar-column"><i style="height:86%"></i><span>Jun</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-heading">
+          <div><h3>Workspace Activity</h3><p>Example activity feed</p></div>
+        </div>
+        <div class="activity"><span class="activity-dot"></span><div><b>Dashboard initialized</b><small>Interface ready</small></div></div>
+        <div class="activity"><span class="activity-dot"></span><div><b>Workspace created</b><small>Local demo environment</small></div></div>
+        <div class="activity"><span class="activity-dot"></span><div><b>Template version 1.0</b><small>Sample project data</small></div></div>
+      </article>
+    </section>
+
+    <section class="panel table-panel" id="projectsContent">
+      <div class="panel-heading table-heading">
+        <div><h3 id="tableTitle">Recent Projects</h3><p>Example records for preview</p></div>
+        <input id="searchInput" type="search" placeholder="Search records..." aria-label="Search records">
+        <button id="addProjectButton" class="primary-button" type="button">+ Add Project</button>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>PROJECT</th><th>OWNER</th><th>STATUS</th><th>UPDATED</th></tr></thead>
+          <tbody id="tableBody">
+            <tr><td>Website Redesign</td><td>Alex Morgan</td><td><span class="status-pill">Active</span></td><td>Today</td></tr>
+            <tr><td>Mobile Dashboard</td><td>Jamie Lee</td><td><span class="status-pill">In progress</span></td><td>Yesterday</td></tr>
+            <tr><td>Brand Identity</td><td>Sam Taylor</td><td><span class="status-pill muted-pill">Completed</span></td><td>Oct 24</td></tr>
+            <tr><td>Analytics Portal</td><td>Jordan Kim</td><td><span class="status-pill">Active</span></td><td>Oct 22</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-foot" id="rowCount">Showing 4 sample records</p>
+    </section>
+
+    <section class="panel" id="projectFormPanel" hidden>
+      <div class="panel-heading">
+        <div><h3 id="projectFormTitle">Add Project</h3>
+        <p>Enter project details below</p></div>
+      </div>
+      <form id="projectForm">
+        <label for="projectName">Project name</label>
+        <input id="projectName" name="projectName" required maxlength="80" placeholder="e.g. Website Redesign">
+
+        <label for="projectOwner">Owner</label>
+        <input id="projectOwner" name="projectOwner" required maxlength="60" placeholder="e.g. Alex Morgan">
+
+        <label for="projectStatus">Status</label>
+        <select id="projectStatus" name="projectStatus" required>
+          <option value="Active">Active</option>
+          <option value="In progress">In progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+
+        <button class="primary-button" type="submit">Save Project</button>
+        <button id="cancelProjectButton" type="button">Cancel</button>
+      </form>
+    </section>
+
+    <footer>APIN ANONYMUS-X · NO FAME. NO NOISE. JUST CODE.</footer>
+  </main>
+</div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
